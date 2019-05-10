@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/layout/Header';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h2>Shopping list</h2>
+      <Header />
     </div>
   );
 }
