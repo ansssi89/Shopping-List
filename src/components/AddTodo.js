@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-export class AddItem extends Component {
+export class AddTodo extends Component {
     state = {
         title: ''
     }
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.AddItem(this.state.title);
+        this.props.AddTodo(this.state.title);
         this.setState({title: ''})
     }
 
-    onChange = (e) => ({
+    onChange = (e) => this.setState({
         [e.target.name]:e.target.value
     })
 
@@ -42,8 +42,8 @@ export class AddItem extends Component {
 }
 
 //PropTypes
-AddItem.propTypes = {
-    AddItem: PropTypes.func.isRequired
+AddTodo.propTypes = {
+    AddTodo: PropTypes.func.isRequired
 }
 
-export default AddItem;
+export default AddTodo;
